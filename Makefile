@@ -1,6 +1,6 @@
 MAKEFLAGS	+= --jobs=3
 
-CXX	= g++
+CXX			= g++
 CXXFLAGS	= -g -O0 -Wall -Wextra -Werror -pedantic-errors -MMD -MP -std=c++14
 LDFLAGS		= -lm
 SOURCES		= $(wildcard *.cpp)

@@ -1,18 +1,16 @@
-MAKEFLAGS	+= --jobs=3
-
 CXX			= g++
 CXXFLAGS	= -g -O0 -Wall -Wextra -Werror -pedantic-errors -MMD -MP -std=c++14
 LDFLAGS		= -lm
-SOURCES		= $(wildcard *.cpp)
-EXES		= $(SOURCES:.cpp=)
-DEPS		= $(SOURCES:.cpp=.d)
+SRC			= main.cpp
+EXE			= a.out
+DEP			= a.d
 
 .PHONY: all clean
 
-all: $(EXES)
+all: $(EXE)
 
 clean:
-	rm -f $(EXES) $(DEPS)
+	rm -f $(EXE) $(DEP)
 
-%: %.c
-	$(CXX) $(CXXFLAGS) $(LDFLAGS) -o $@ -c $^
+$(EXE): $(SRC)
+	$(CXX) $(CXXFLAGS) $(LDFLAGS) -o $@ $^

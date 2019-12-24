@@ -79,7 +79,15 @@ T combination(T n, T k, T mod = 1)
 	}
 }
 
+{% if mod %}
+const ll MOD = {{ mod }};
+{% endif %}
+
 int main(int, char**)
 {
+	{% if prediction_success %}
+	{{ input_part }}
+	{% endif %}
+
 	return 0;
 }

@@ -1,5 +1,5 @@
 CXX			= g++
-CXXFLAGS	= -g -O0 -Wall -Wextra -Werror -pedantic-errors -MMD -MP -std=c++14
+CXXFLAGS	= -g -O0 -Wall -Wextra -Werror -Wno-sign-compare -pedantic-errors -MMD -MP -std=c++14
 LDFLAGS		= -lm
 SRC			= main.cpp
 EXE			= a.out
